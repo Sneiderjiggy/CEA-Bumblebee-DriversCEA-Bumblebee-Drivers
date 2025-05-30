@@ -7,58 +7,87 @@
   <title>CEA Bumblebee Drivers</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
       color: #333;
     }
     header {
-      background: #222;
+      background: #212121;
       color: #ffeb3b;
       padding: 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background: #ffb300;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #000;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
     .banner {
       text-align: center;
+      padding: 30px;
       background: #fff;
-      padding: 20px;
     }
     .banner img {
-      max-width: 100%;
+      max-width: 90%;
       height: auto;
     }
-    .contenido {
-      padding: 30px;
-      max-width: 1000px;
+    .seccion {
+      padding: 40px 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    .servicio-info {
-      background: #fff8e1;
-      padding: 20px;
+    .servicios {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff9c4;
       border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 280px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .servicio-info h2 {
+    .card h3 {
       margin-top: 0;
     }
-    .boton-pago {
-      display: inline-block;
-      background: #4caf50;
-      color: #fff;
-      padding: 15px 25px;
+    .contacto, .ubicacion, .redes {
+      background: #fff;
+      border-radius: 10px;
       margin-top: 20px;
-      font-size: 18px;
-      border-radius: 5px;
-      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 20px;
     }
-    .boton-pago:hover {
-      background: #388e3c;
+    .contacto a, .redes a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: #fff;
+      background: #ff6f00;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
     }
     footer {
-      text-align: center;
       background: #212121;
       color: #ccc;
+      text-align: center;
       padding: 15px;
       margin-top: 40px;
     }
@@ -68,24 +97,72 @@
 
 <header>
   <h1>CEA Bumblebee Drivers</h1>
-  <p>Licencia de Conducción Vehículo Particular</p>
+  <p>Tu camino hacia la libertad empieza aquí 🚗💨</p>
 </header>
 
+<nav>
+  <a href="#servicios">Servicios</a>
+  <a href="#ubicacion">Ubicación</a>
+  <a href="#contacto">Contáctanos</a>
+  <a href="#redes">Redes Sociales</a>
+</nav>
+
 <div class="banner">
-  <img src="auto-bumblebee.png" alt="Auto Camaro Amarillo">
+  <img src="auto-bumblebee.png" alt="Auto Camaro amarillo">
 </div>
 
-<div class="contenido">
-  <div class="servicio-info">
-    <h2>Curso B1 - Vehículo Particular</h2>
-    <p>Incluye clases teóricas, prácticas, simulador y asesoría en trámites.</p>
-    <p><strong>¡Comienza con el 50%!</strong></p>
-    <a class="boton-pago" href="https://www.ejemplo.com/pagar-curso-b1" target="_blank">Pagar Ahora</a>
+<div class="seccion" id="servicios">
+  <h2 style="text-align:center;">Nuestros Servicios</h2>
+  <div class="servicios">
+    <div class="card">
+      <h3>A2</h3>
+      <p>Licencia para moto de cualquier cilindraje</p>
+    </div>
+    <div class="card">
+      <h3>B1</h3>
+      <p>Licencia para conducir vehículo particular</p>
+    </div>
+    <div class="card">
+      <h3>C1</h3>
+      <p>Licencia para vehículo particular y público</p>
+    </div>
+    <div class="card">
+      <h3>Clases Prácticas</h3>
+      <p>Con instructores expertos y vehículos modernos</p>
+    </div>
+    <div class="card">
+      <h3>Asesoría en Trámites</h3>
+      <p>Te guiamos en el proceso para obtener tu licencia</p>
+    </div>
+  </div>
+</div>
+
+<div class="seccion ubicacion" id="ubicacion">
+  <h2 style="text-align:center;">Ubicación</h2>
+  <p style="text-align:center;">AC 24 # 40-28 Piso 2 Quinta Paredes / Bogotá D.C.</p>
+  <iframe src="https://maps.google.com/maps?q=AC%2024%20%2340-28%20Bogot%C3%A1&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+<div class="seccion contacto" id="contacto">
+  <h2 style="text-align:center;">Contáctanos</h2>
+  <p style="text-align:center;">📞 305 7775723 / 350 2012998</p>
+  <p style="text-align:center;">📧 ceabumblebeedrivers@gmail.com</p>
+  <div style="text-align:center;">
+    <a href="https://wa.me/573057775723" target="_blank">Escríbenos por WhatsApp</a>
+    <a href="mailto:ceabumblebeedrivers@gmail.com">Enviar Email</a>
+  </div>
+</div>
+
+<div class="seccion redes" id="redes">
+  <h2 style="text-align:center;">Síguenos</h2>
+  <div style="text-align:center;">
+    <a href="https://www.facebook.com/ceabumblebeedrivers" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/ceabumblebeedrivers" target="_blank">Instagram</a>
   </div>
 </div>
 
 <footer>
-  <p>&copy; 2025 CEA Bumblebee Drivers</p>
+  <p>&copy; 2025 CEA Bumblebee Drivers. Todos los derechos reservados.</p>
 </footer>
 
 </body>
